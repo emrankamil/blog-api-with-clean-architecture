@@ -13,7 +13,7 @@ import (
 )
 
 
-func NewLoginRouter(env *bootstrap.Env, timeout time.Duration, db mongo.Database, group *gin.RouterGroup){
+func NewLogoutRouter(env *bootstrap.Env, timeout time.Duration, db mongo.Database, group *gin.RouterGroup){
 	ur := repository.NewUserRepository(db, domain.UserCollection)
 	su := usecase.NewLoginUsecase(ur, timeout)
 	uu := usecase.NewUserUsecase(ur, timeout)
@@ -22,6 +22,6 @@ func NewLoginRouter(env *bootstrap.Env, timeout time.Duration, db mongo.Database
 		LoginUsecase: su,
 		Env: env,
 	}
-
-	group.POST("/login", sc.Login)
+	
+	group.GET("/logout", sc.Logout)
 }
