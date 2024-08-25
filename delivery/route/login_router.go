@@ -1,12 +1,12 @@
 package route
 
 import (
-	"AAiT-backend-group-6/bootstrap"
-	"AAiT-backend-group-6/delivery/controller"
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/mongo"
-	"AAiT-backend-group-6/repository"
-	"AAiT-backend-group-6/usecase"
+	"blog-api_with-clean-architecture/bootstrap"
+	"blog-api_with-clean-architecture/delivery/controller"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/mongo"
+	"blog-api_with-clean-architecture/repository"
+	"blog-api_with-clean-architecture/usecase"
 	"time"
 
 	"github.com/gin-gonic/gin"

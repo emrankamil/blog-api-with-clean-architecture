@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"AAiT-backend-group-6/bootstrap"
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/infrastructure"
+	"blog-api_with-clean-architecture/bootstrap"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/infrastructure"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"AAiT-backend-group-6/utils"
+	"blog-api_with-clean-architecture/utils"
 	"fmt"
 	"net/http"
 	"strings"

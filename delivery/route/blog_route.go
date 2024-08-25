@@ -1,20 +1,19 @@
 package route
 
 import (
-	"AAiT-backend-group-6/delivery/controller"
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/mongo"
-	"AAiT-backend-group-6/redis"
-	"AAiT-backend-group-6/repository"
-	"AAiT-backend-group-6/usecase"
+	"blog-api_with-clean-architecture/delivery/controller"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/mongo"
+	"blog-api_with-clean-architecture/repository"
+	"blog-api_with-clean-architecture/usecase"
 
 	"github.com/gin-gonic/gin"
 )
 
-func NewBlogRouter(db mongo.Database, gin *gin.Engine, redisClient redis.Client) {
+func NewBlogRouter(db mongo.Database, gin *gin.Engine) {
 	tr := repository.NewBlogRepository(db, domain.CollectionBlogs)
 	tu := usecase.NewBlogUseCase(tr)
-	tc := controller.NewBlogController(tu, redisClient)
+	tc := controller.NewBlogController(tu)
 	
 	// protectedRoute := gin.Group("")
 	publicRoute := gin.Group("")

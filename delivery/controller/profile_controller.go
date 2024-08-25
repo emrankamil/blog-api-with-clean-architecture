@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"AAiT-backend-group-6/domain"
+	"blog-api_with-clean-architecture/domain"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
