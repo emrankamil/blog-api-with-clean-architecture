@@ -4,17 +4,18 @@ import (
 	"blog-api_with-clean-architecture/delivery/controller"
 	"blog-api_with-clean-architecture/domain"
 	"blog-api_with-clean-architecture/mongo"
+	"blog-api_with-clean-architecture/redis"
 	"blog-api_with-clean-architecture/repository"
 	"blog-api_with-clean-architecture/usecase"
 
 	"github.com/gin-gonic/gin"
 )
 
-func NewBlogRouter(db mongo.Database, gin *gin.Engine) {
+func NewBlogRouter(db mongo.Database, gin *gin.Engine, redisClient redis.Client) {
 	tr := repository.NewBlogRepository(db, domain.CollectionBlogs)
 	tu := usecase.NewBlogUseCase(tr)
-	tc := controller.NewBlogController(tu)
-	
+	tc := controller.NewBlogController(tu, redisClient)
+
 	// protectedRoute := gin.Group("")
 	publicRoute := gin.Group("")
 	// protectedRoute.Use(infrastructure.AdminOnlMiddleware(), infrastructure.JWTAuthMiddleware())

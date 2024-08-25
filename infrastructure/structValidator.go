@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"AAiT-backend-group-6/domain"
+	"blog-api_with-clean-architecture/domain"
 
 	"github.com/go-playground/validator/v10"
 )

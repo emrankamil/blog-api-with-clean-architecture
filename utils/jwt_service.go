@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"AAiT-backend-group-6/domain"
+	"blog-api_with-clean-architecture/domain"
 	"errors"
 	"time"
 
