@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/utils"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/utils"
 	"context"
 	"time"
 )
@@ -17,12 +17,6 @@ func NewLoginUsecase(userRepository domain.UserRepository, timeout time.Duration
 		userRepository: userRepository,
 		contextTimeout: timeout,
 	}
-}
-
-func (lu *loginUsecase) GetUserByEmail(c context.Context, email string) (*domain.User, error) {
-	ctx, cancel := context.WithTimeout(c, lu.contextTimeout)
-	defer cancel()
-	return lu.userRepository.GetUserByEmail(ctx, email)
 }
 
 func (lu *loginUsecase) CreateAccessToken(user *domain.User, secret string, expiry int) (accessToken string, err error) {

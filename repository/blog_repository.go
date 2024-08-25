@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/mongo"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/mongo"
 	"context"
 
 	// "context"

@@ -1,9 +1,9 @@
 package usecase
 
 import (
-	"AAiT-backend-group-6/domain"
-	"AAiT-backend-group-6/infrastructure"
-	"AAiT-backend-group-6/utils"
+	"blog-api_with-clean-architecture/domain"
+	"blog-api_with-clean-architecture/infrastructure"
+	"blog-api_with-clean-architecture/utils"
 	"context"
 	"errors"
 	"time"

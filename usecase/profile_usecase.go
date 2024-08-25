@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"AAiT-backend-group-6/domain"
+	"blog-api_with-clean-architecture/domain"
 	"context"
 	"time"
 )

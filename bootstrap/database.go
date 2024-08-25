@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"AAiT-backend-group-6/mongo"
+	"blog-api_with-clean-architecture/mongo"
 	"context"
 	"fmt"
 	"log"
